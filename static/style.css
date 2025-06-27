@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('/static/background/1374980.jpg');  /* ✅ EXACT path to your image */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  color: white;
+}
+
+.dashboard {
+  text-align: center;
+  padding: 50px;
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 700px;
+  margin: 50px auto;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.top-heading h1 {
+  font-size: 2.5em;
+  color: #ffe0ac;
+  margin-bottom: 20px;
+}
+
+.upload-box {
+  margin-top: 20px;
+}
+
+.upload-input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  width: 80%;
+  max-width: 400px;
+}
+
+.upload-btn {
+  margin-top: 20px;
+  padding: 10px 30px;
+  font-size: 1em;
+  background-color: #ffca3a;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.upload-btn:hover {
+  background-color: #ffc107;
+}
+
+.result {
+  margin-top: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.result img {
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.download-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background-color: #ffca3a;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.download-btn:hover {
+  background-color: #ffc107;
+}
+

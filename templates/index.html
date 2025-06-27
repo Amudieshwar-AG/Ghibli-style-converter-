@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Ghibli Styler</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="dashboard">
+    <div class="top-heading">
+      <h1>🎨 Ghibli Style Image Converter</h1>
+    </div>
+
+    <div class="upload-box">
+      <p>Upload your image to get a magical anime look!</p>
+      <form action="/upload" method="POST" enctype="multipart/form-data">
+
+        <input type="file" name="file" accept="image/*" class="upload-input"><br><br>
+        <button type="submit" class="upload-btn">Upload</button>
+      </form>
+    </div>
+
+    {% if uploaded_image %}
+    <div class="result">
+      <h2>📸 Uploaded Image:</h2>
+      <img src="{{ url_for('static', filename='uploads/' + uploaded_image) }}" alt="Uploaded Image" width="300">
+    </div>
+    {% endif %}
+
+    {% if output_image %}
+    <div class="result">
+      <h2>✨ Ghibli-Styled Output:</h2>
+      <img src="{{ url_for('static', filename='results/' + output_image) }}" alt="Stylized Output" width="300">
+      <br><br>
+      <a href="{{ url_for('static', filename='results/' + output_image) }}" download class="download-btn">
+        ⬇️ Download Ghibli Image
+      </a>
+    </div>
+    {% endif %}
+
+  </div>
+</body>
+</html>
